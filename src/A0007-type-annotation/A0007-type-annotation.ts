@@ -1,5 +1,5 @@
 let x;
-if (typeof x === `undefined`) x = 20;
+if (typeof x === 'undefined') x = 20;
 console.log(x * 2);
 
 export function createPerson(
@@ -14,15 +14,23 @@ export function createPerson(
     lastName,
   };
 }
+
 export function squareOf(x: any) {
-  if (typeof x === `number`) return x * x;
+  if (typeof x === 'number') return x * x;
   return null;
 }
 
 const squareOfTwoNumber = squareOf(2);
-const squareOfTwoNumber = squareOf(`2`);
+const squareOfString = squareOf('2');
+
 if (squareOfTwoNumber === null) {
-  console.log(`Conta invalida`)
+  console.log('Conta inválida');
 } else {
-  console.log(squareOfTwoNumber);
+  console.log(squareOfTwoNumber * 100);
+}
+
+if (squareOfString === null) {
+  console.log('Conta inválida');
+} else {
+  console.log(squareOfString * 100);
 }
